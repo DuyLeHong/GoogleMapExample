@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">GoogleMapExample</string>
     <string name="title_activity_maps">MapsActivity</string>
+
+
+    <string name="facebook_app_id">443035210956238</string>
+    <string name="fb_login_protocol_scheme">fb443035210956238</string>
+    <string name="facebook_client_token">972866563d797e5ff9e8c7e0a1608633</string>
+
+
 </resources>
