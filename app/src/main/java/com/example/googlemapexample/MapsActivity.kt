@@ -3,6 +3,7 @@ package com.example.googlemapexample
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.googlemapexample.databinding.ActivityMapsBinding
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -35,6 +36,10 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             mMap.addMarker(MarkerOptions().position(hanoi).title("Marker in Hanoi"))
             mMap.moveCamera(CameraUpdateFactory.newLatLng(hanoi))
             mMap.animateCamera( CameraUpdateFactory.zoomTo( 17.0f ) )
+
+            val mess: String? = null
+
+            //Toast.makeText(applicationContext, mess, Toast.LENGTH_SHORT).show()
         })
     }
 

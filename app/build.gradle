@@ -3,6 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
     id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
 }
 
 
@@ -60,6 +61,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-database'
 
     implementation 'com.google.firebase:firebase-storage'
+
+    implementation 'com.google.firebase:firebase-crashlytics'
 
     implementation 'com.firebaseui:firebase-ui-storage:7.2.0'
 
