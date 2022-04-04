@@ -137,18 +137,18 @@ public class Activity2 extends AppCompatActivity {
 
 
 
-//    @Override
-//    public void onStart() {
-//        super.onStart();
-//        // Check if user is signed in (non-null) and update UI accordingly.
-//        FirebaseUser currentUser = mAuth.getCurrentUser();
-//        updateUI(currentUser);
-//    }
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        updateUI(currentUser);
+    }
 
     private void updateUI(FirebaseUser currentUser) {
         if (currentUser != null) {
             //
-            startActivity(new Intent(getApplicationContext(), StorageActivity.class));
+            startActivity(new Intent(getApplicationContext(), DetailsActivity.class));
 
             //finish();
         }
