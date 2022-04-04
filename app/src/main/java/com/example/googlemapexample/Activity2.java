@@ -148,7 +148,7 @@ public class Activity2 extends AppCompatActivity {
     private void updateUI(FirebaseUser currentUser) {
         if (currentUser != null) {
             //
-            startActivity(new Intent(getApplicationContext(), DetailsActivity.class));
+            startActivity(new Intent(getApplicationContext(), StorageActivity.class));
 
             //finish();
         }

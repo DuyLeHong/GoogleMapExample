@@ -52,7 +52,7 @@ public class DetailsActivity extends AppCompatActivity {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("lesson15/user/diachi");
 
-        myRef.setValue("Cau Giay");
+        myRef.setValue("104 Hoang Ngan");
         // [END write_message]
 
         // [START read_message]
