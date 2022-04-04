@@ -122,12 +122,14 @@ public class Activity2 extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
+
+                            updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithCredential:failure", task.getException());
                             Toast.makeText(getApplicationContext(), "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
-                            //updateUI(null);
+                            updateUI(null);
                         }
                     }
                 });
@@ -135,9 +137,21 @@ public class Activity2 extends AppCompatActivity {
 
 
 
-    @Override
-    public void onStart() {
-        super.onStart();
+//    @Override
+//    public void onStart() {
+//        super.onStart();
+//        // Check if user is signed in (non-null) and update UI accordingly.
+//        FirebaseUser currentUser = mAuth.getCurrentUser();
+//        updateUI(currentUser);
+//    }
+
+    private void updateUI(FirebaseUser currentUser) {
+        if (currentUser != null) {
+            //
+            startActivity(new Intent(getApplicationContext(), DetailsActivity.class));
+
+            //finish();
+        }
     }
 
 

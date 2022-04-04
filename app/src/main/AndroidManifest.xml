@@ -5,7 +5,6 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
@@ -16,9 +15,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GoogleMapExample">
         <activity
+            android:name=".StorageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailsActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activity2"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,8 +32,8 @@
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
-            tools:replace="android:value"
-            android:value="@string/facebook_app_id" />
+            android:value="@string/facebook_app_id"
+            tools:replace="android:value" />
         <meta-data
             android:name="com.facebook.sdk.ClientToken"
             android:value="@string/facebook_client_token" />
@@ -51,9 +55,7 @@
         <activity
             android:name=".MapsActivity"
             android:exported="true"
-            android:label="@string/title_activity_maps">
-
-        </activity>
+            android:label="@string/title_activity_maps" />
         <activity
             android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
